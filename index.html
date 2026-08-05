@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mustakim Islam Shihab — Aspiring Full Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="intro-loader" id="introLoader">
+  <div class="intro-text">Mustakim<span class="accent">.</span>dev</div>
+</div>
+
+<div class="scroll-progress"><div class="scroll-progress-fill" id="scrollFill"></div></div>
+
+<pre class="bg-lines" id="bgLines"></pre>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="logo">Shihab<span>.dev</span></div>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#roles">Roles</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-social">
+          <a href="https://www.linkedin.com/in/mustakim-islam-shihab-48972039b/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.95v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+          <a href="https://github.com/Shihab007DIU" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.73.5.98 5.24.98 11.5c0 4.96 3.16 9.16 7.55 10.64.55.1.75-.24.75-.53 0-.26-.01-1.13-.02-2.04-3.07.67-3.72-1.3-3.72-1.3-.5-1.28-1.22-1.62-1.22-1.62-1-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.57 1.2 3.2.92.1-.71.38-1.2.69-1.48-2.45-.28-5.02-1.22-5.02-5.44 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.4.11-2.92 0 0 .93-.3 3.05 1.13a10.6 10.6 0 0 1 5.56 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.52.22 2.64.11 2.92.7.77 1.13 1.75 1.13 2.95 0 4.23-2.58 5.16-5.04 5.43.39.34.74 1.01.74 2.04 0 1.47-.01 2.66-.01 3.02 0 .29.2.64.76.53 4.38-1.48 7.54-5.68 7.54-10.64C23.02 5.24 18.27.5 12 .5Z"/></svg>
+          </a>
+        </div>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.5M12 19v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12H5M19 12h2.5M4.2 19.8L6 18M18 6l1.8-1.8"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 14.5A8.5 8.5 0 019.5 4a8.5 8.5 0 1010.5 10.5z"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero wrap" style="border-top:none;">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow">AVAILABLE FOR OPPORTUNITIES</div>
+      <h1>Mustakim Islam<br>Shihab</h1>
+      <div class="typed-line"><span id="typed"></span><span class="cursor"></span></div>
+    </div>
+    <div class="hero-photo">
+      <div class="photo-frame" id="heroAvatar">
+        <span class="photo-initials">MIS</span>
+        <img src="profile.jpg" alt="Mustakim Islam Shihab" onerror="this.remove()">
+      </div>
+      <span class="floating-tag tag-1">Full Stack (in progress)</span>
+      <span class="floating-tag tag-2">Problem Solver</span>
+      <span class="floating-tag tag-3">Curious Learner</span>
+    </div>
+  </div>
+  <div class="scroll-cue"><div class="line"></div>SCROLL</div>
+  <div class="spin-badge" aria-hidden="true">
+    <svg viewBox="0 0 120 120" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs><path id="spinBadgePath" d="M60,60 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs>
+      <text font-size="9" letter-spacing="2">
+        <textPath href="#spinBadgePath" xlink:href="#spinBadgePath">STILL BUILDING • STILL LEARNING • </textPath>
+      </text>
+    </svg>
+    <span class="spin-badge-dot"></span>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Full Stack (in progress)</span><span class="dot">✦</span>
+    <span>Problem Solver</span><span class="dot">✦</span>
+    <span>Python</span><span class="dot">✦</span>
+    <span>JavaScript</span><span class="dot">✦</span>
+    <span>SQL</span><span class="dot">✦</span>
+    <span>Curious Learner</span><span class="dot">✦</span>
+    <span>Daffodil International University</span><span class="dot">✦</span>
+    <span>Full Stack (in progress)</span><span class="dot">✦</span>
+    <span>Problem Solver</span><span class="dot">✦</span>
+    <span>Python</span><span class="dot">✦</span>
+    <span>JavaScript</span><span class="dot">✦</span>
+    <span>SQL</span><span class="dot">✦</span>
+    <span>Curious Learner</span><span class="dot">✦</span>
+    <span>Daffodil International University</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">01 — About</div>
+        <h2>Learning by building.</h2>
+      </div>
+      <div class="section-note">Every project below is a step toward writing software that actually holds up.</div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="avatar" id="avatar">
+          <span class="avatar-initials">MIS</span>
+          <img src="profile.jpg" alt="Mustakim Islam Shihab" onerror="this.remove()">
+        </div>
+        <p>I'm Mustakim Islam Shihab, a 2nd year student at Daffodil International University, working toward becoming a full stack developer.</p>
+        <p class="dim">I care more about understanding why a system is designed a certain way than just getting it to run. That means reading the spec twice, sketching the diagram before the code, and treating documentation as part of the build — not an afterthought. Outside of coursework, I spend time on sports, gaming, anime, movies and series, and generally chasing whatever I don't understand yet.</p>
+      </div>
+      <div class="terminal">
+        <div class="terminal-bar"><span></span><span></span><span></span></div>
+        <div class="terminal-body">
+          <div><span class="key">name</span>: <span class="val">Mustakim Islam Shihab</span></div>
+          <div><span class="key">university</span>: <span class="val">Daffodil International University</span></div>
+          <div><span class="key">year</span>: <span class="val">2nd Year</span></div>
+          <div><span class="key">based_in</span>: <span class="val">Savar, Dhaka</span></div>
+          <div><span class="key">goal</span>: <span class="val">Full Stack Developer</span></div>
+          <div><span class="key">status</span>: <span class="val">currently building</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">02 — Education</div>
+        <h2>Where I'm learning.</h2>
+      </div>
+      <div class="section-note">Results so far, alongside the degree in progress.</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-marker"></div>
+      <div class="edu-body">
+        <h3>Daffodil International University</h3>
+        <p class="edu-meta">2nd Year · Undergraduate · SGPA 4.00 (last semester)</p>
+        <p class="edu-desc">Building a foundation across programming, data structures, and object-oriented design — the base for a full stack development path.</p>
+      </div>
+      <div class="edu-loc">Savar, Dhaka</div>
+    </div>
+
+    <div class="edu-results">
+      <div class="edu-stat">
+        <span class="edu-stat-label">SSC</span>
+        <div class="edu-stat-rows">
+          <div><span class="k">Department</span><span class="v">Science</span></div>
+          <div><span class="k">Board</span><span class="v">Dhaka</span></div>
+          <div><span class="k">Year</span><span class="v">2020</span></div>
+        </div>
+        <div class="edu-stat-result">
+          <span class="edu-stat-value" data-count="5.00">0.00</span>
+          <span class="edu-stat-unit">GPA</span>
+        </div>
+      </div>
+      <div class="edu-stat">
+        <span class="edu-stat-label">HSC</span>
+        <div class="edu-stat-rows">
+          <div><span class="k">Department</span><span class="v">Science</span></div>
+          <div><span class="k">Board</span><span class="v">Dhaka</span></div>
+          <div><span class="k">Year</span><span class="v">2022</span></div>
+        </div>
+        <div class="edu-stat-result">
+          <span class="edu-stat-value" data-count="5.00">0.00</span>
+          <span class="edu-stat-unit">GPA</span>
+        </div>
+      </div>
+      <div class="edu-stat">
+        <span class="edu-stat-label">University</span>
+        <div class="edu-stat-rows">
+          <div><span class="k">Semester</span><span class="v">Previous</span></div>
+          <div><span class="k">Status</span><span class="v">Running</span></div>
+        </div>
+        <div class="edu-stat-result">
+          <span class="edu-stat-value" data-count="4.00">0.00</span>
+          <span class="edu-stat-unit">SGPA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">03 — Skills</div>
+        <h2>The current stack.</h2>
+      </div>
+      <div class="section-note">Building toward full stack development, one layer at a time.</div>
+    </div>
+    <div class="skill-groups">
+      <div class="skill-col">
+        <h3>Languages</h3>
+        <div class="skill-tags">
+          <span>C</span><span>Java</span><span>Python</span><span>JavaScript</span><span>SQL</span>
+        </div>
+      </div>
+      <div class="skill-col">
+        <h3>Web</h3>
+        <div class="skill-tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-col">
+        <h3>Foundations</h3>
+        <div class="skill-tags">
+          <span>DSA</span><span>OOP</span>
+        </div>
+      </div>
+      <div class="skill-col">
+        <h3>Currently building</h3>
+        <div class="skill-tags">
+          <span>Git &amp; GitHub</span><span>REST APIs</span><span>Node.js</span><span>Testing basics</span>
+        </div>
+      </div>
+      <div class="skill-col">
+        <h3>Aiming to learn next</h3>
+        <div class="skill-tags">
+          <span>Flask</span><span>Django</span><span>Docker (basic)</span><span>Linux</span><span>Postman</span><span>Figma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="roles">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">04 — Roles &amp; Responsibilities</div>
+        <h2>Where I contribute.</h2>
+      </div>
+      <div class="section-note">Beyond the classroom and the code editor.</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-marker"></div>
+      <div class="edu-body">
+        <h3>Rotaract Club</h3>
+        <p class="edu-meta">Committee Member</p>
+        <p class="edu-desc">Helping organize club initiatives and community-focused activities alongside fellow committee members.</p>
+      </div>
+      <div class="edu-loc">Daffodil International University</div>
+    </div>
+    <div class="edu-card" style="margin-top:24px;">
+      <div class="edu-marker"></div>
+      <div class="edu-body">
+        <h3>Data Science Club</h3>
+        <p class="edu-meta">Member</p>
+        <p class="edu-desc">Taking part in club sessions and activities centered on data science, machine learning, and applied AI topics.</p>
+      </div>
+      <div class="edu-loc">Daffodil International University</div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">05 — Experience</div>
+        <h2>On the job.</h2>
+      </div>
+      <div class="section-note">No formal role yet — here's the path I'm working toward.</div>
+    </div>
+    <div class="goal-grid">
+      <div class="goal-card">
+        <span class="goal-tag">Open Source</span>
+        <h3>Contribute to real projects</h3>
+        <p>Start with small, well-scoped issues — documentation, bug fixes, tests — on Python and JavaScript projects, then work up to features.</p>
+      </div>
+      <div class="goal-card">
+        <span class="goal-tag">Freelance Practice</span>
+        <h3>Ship for real people</h3>
+        <p>Take on small, even unpaid builds — a restaurant site, a school site, an inventory system — to practice working with an actual client.</p>
+      </div>
+      <div class="goal-card">
+        <span class="goal-tag">Internship</span>
+        <h3>First formal role</h3>
+        <p>Targeting an internship once Python, Flask/Django, SQL, and Git are solid — the near-term goal this section is waiting on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">06 — Certifications</div>
+        <h2>Courses &amp; credentials.</h2>
+      </div>
+      <div class="section-note">None finished yet — this is the study list I'm working through.</div>
+    </div>
+    <div class="skill-groups cert-groups">
+      <div class="skill-col">
+        <h3>Python</h3>
+        <div class="skill-tags">
+          <span>Python for Everybody</span><span>Google IT Automation with Python</span><span>Python Data Structures</span>
+        </div>
+      </div>
+      <div class="skill-col">
+        <h3>Web Development</h3>
+        <div class="skill-tags">
+          <span>Responsive Web Design</span><span>JavaScript Algorithms</span><span>React Basics</span>
+        </div>
+      </div>
+      <div class="skill-col">
+        <h3>Database</h3>
+        <div class="skill-tags">
+          <span>SQL</span><span>Database Design</span><span>MySQL</span>
+        </div>
+      </div>
+      <div class="skill-col">
+        <h3>AI</h3>
+        <div class="skill-tags">
+          <span>Machine Learning</span><span>Deep Learning</span><span>Computer Vision</span><span>Prompt Engineering</span>
+        </div>
+      </div>
+      <div class="skill-col">
+        <h3>Git &amp; Cloud</h3>
+        <div class="skill-tags">
+          <span>Git &amp; GitHub</span><span>AWS Cloud Practitioner</span><span>Azure Fundamentals</span><span>GCP Digital Leader</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">07 — Achievements</div>
+        <h2>Contests &amp; competitions.</h2>
+      </div>
+      <div class="section-note">Example entries below — swap in your real results.</div>
+    </div>
+    <div class="achievement-grid">
+      <div class="achievement-card">
+        <svg class="achievement-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 5H4a3 3 0 003 3M17 5h3a3 3 0 01-3 3"/></svg>
+        <h3>University Hackathon</h3>
+        <p>Participated in a team-based hackathon, building a working prototype under a tight time limit.</p>
+      </div>
+      <div class="achievement-card">
+        <svg class="achievement-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4L3 12l5 8M16 4l5 8-5 8M14 3l-4 18"/></svg>
+        <h3>Algorithmic Programming Contest</h3>
+        <p>Took part in a competitive programming contest, solving data structure and algorithm problems under time pressure.</p>
+      </div>
+    </div>
+    <div class="target-block">
+      <h3 class="target-heading">On the radar</h3>
+      <div class="skill-tags">
+        <span>ICPC Preliminary</span><span>IUPC</span><span>Codeforces Contests</span><span>AtCoder Beginner Contest</span><span>LeetCode Weekly Contest</span><span>Kaggle Competitions</span><span>Google AI Hackathons</span><span>Microsoft AI Challenges</span><span>DIU Hackathon</span><span>NASA Space Apps Challenge</span><span>HackTheBox CTF</span><span>DevFest Hackathon</span><span>Figma Design Contest</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="practice">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">08 — Practice Platforms</div>
+        <h2>Problems, not just theory.</h2>
+      </div>
+      <div class="section-note">Targets I'm working toward, not current totals.</div>
+    </div>
+    <div class="edu-results">
+      <div class="edu-stat">
+        <span class="edu-stat-label">LeetCode</span>
+        <div class="edu-stat-rows">
+          <div><span class="k">Focus</span><span class="v">DSA problems</span></div>
+          <div><span class="k">Status</span><span class="v">In progress</span></div>
+        </div>
+        <div class="edu-stat-result">
+          <span class="edu-stat-value" data-count="200">0</span>
+          <span class="edu-stat-unit">Target solved</span>
+        </div>
+      </div>
+      <div class="edu-stat">
+        <span class="edu-stat-label">HackerRank</span>
+        <div class="edu-stat-rows">
+          <div><span class="k">Track</span><span class="v">Python</span></div>
+          <div><span class="k">Status</span><span class="v">In progress</span></div>
+        </div>
+        <div class="edu-stat-result">
+          <span class="edu-stat-value" data-count="5">0</span>
+          <span class="edu-stat-unit">Target stars</span>
+        </div>
+      </div>
+      <div class="edu-stat">
+        <span class="edu-stat-label">Codeforces</span>
+        <div class="edu-stat-rows">
+          <div><span class="k">Also tracking</span><span class="v">AtCoder · CodeChef</span></div>
+          <div><span class="k">Status</span><span class="v">Getting active</span></div>
+        </div>
+        <div class="edu-stat-result">
+          <span class="edu-stat-value">Active</span>
+          <span class="edu-stat-unit">Rating goal</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="interests">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">09 — Interests</div>
+        <h2>Outside the editor.</h2>
+      </div>
+      <div class="section-note">The stuff that keeps the other half of my brain busy.</div>
+    </div>
+    <div class="interest-grid">
+      <div class="interest-card">
+        <svg class="interest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6c2 2 4 2 6.4 2s4.4 0 6.4-2M5.6 18.4c2-2 4-2 6.4-2s4.4 0 6.4 2"/></svg>
+        <h3>Sports</h3>
+      </div>
+      <div class="interest-card">
+        <svg class="interest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="8" width="20" height="10" rx="4"/><path d="M7 12h4M9 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18.5" cy="13.5" r="1"/></svg>
+        <h3>Gaming</h3>
+      </div>
+      <div class="interest-card">
+        <svg class="interest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l7 6-7 6V4z"/><path d="M13 4l7 6-7 6V4z"/></svg>
+        <h3>Anime</h3>
+      </div>
+      <div class="interest-card">
+        <svg class="interest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 9h18M8 5v4M16 5v4"/></svg>
+        <h3>Movies &amp; Series</h3>
+      </div>
+      <div class="interest-card">
+        <svg class="interest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5V6a2 2 0 012-2h12a1 1 0 011 1v14"/><path d="M4 19.5A1.5 1.5 0 015.5 18H19"/></svg>
+        <h3>Learning new things</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">10 — Projects</div>
+        <h2>Recent projects.</h2>
+      </div>
+      <div class="section-note">Scroll to move through — swap in more panels as you finish new builds.</div>
+    </div>
+  </div>
+  <div class="work-pin">
+    <div class="work-track">
+      <div class="project-panel">
+        <div class="project-panel-inner">
+          <div class="project-num">01</div>
+          <div>
+            <h3>RoadPulse</h3>
+            <span class="tech">SRS · UML · AI-assisted traffic systems</span>
+            <p>An intelligent traffic management system project, spanning a full Software Requirements Specification with use case and activity diagrams for AI-based detection and adaptive signal timing.</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-panel">
+        <div class="project-panel-inner">
+          <div class="project-num">02</div>
+          <div>
+            <h3>FindIt</h3>
+            <span class="tech">Python · SQL · HTML/CSS/JS</span>
+            <p>A Lost &amp; Found management system covering posting, search, category filtering, claim requests, and admin verification — built end to end from proposal to demo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-panel">
+        <div class="project-panel-inner">
+          <div class="project-num">03</div>
+          <div>
+            <h3>Automated Water Tap System</h3>
+            <span class="tech">Arduino · Ultrasonic Sensor · Relay Module · Embedded C</span>
+            <p>A touchless, sensor-driven tap that opens and closes automatically as a hand comes near — cutting water waste and improving hygiene. An ultrasonic sensor detects hand distance and triggers a single relay module to switch the water flow on and off.</p>
+            <a href="https://drive.google.com/file/d/1f3uM6hi0pgT-cxgfDvLgUN23KNnwAkmF/view?usp=drivesdk" target="_blank" rel="noopener" class="project-play">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M10 8.5l6 3.5-6 3.5v-7z" fill="currentColor"/></svg>
+              Watch demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="work-progress" id="workProgress">
+      <span class="work-dot active"></span>
+      <span class="work-dot"></span>
+      <span class="work-dot"></span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="section-head" style="margin-top:80px;">
+      <div>
+        <div class="section-tag">Up next</div>
+        <h2>Planned builds.</h2>
+      </div>
+      <div class="section-note">Not built yet — the queue I'm working through next.</div>
+    </div>
+    <div class="planned-grid">
+      <div class="planned-card">
+        <span class="planned-tag">Beginner</span>
+        <h3>Student Management System</h3>
+        <span class="tech">Python · SQL</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-tag">Beginner</span>
+        <h3>Library Management System</h3>
+        <span class="tech">Python · SQL</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-tag">Beginner</span>
+        <h3>Calculator</h3>
+        <span class="tech">HTML · CSS · JS</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-tag">Beginner</span>
+        <h3>To-Do List</h3>
+        <span class="tech">HTML · CSS · JS</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-tag">Beginner</span>
+        <h3>Weather App</h3>
+        <span class="tech">JS · Weather API</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-tag">Beginner</span>
+        <h3>Expense Tracker</h3>
+        <span class="tech">HTML · CSS · JS</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-tag">Intermediate</span>
+        <h3>Smart Incident Reporting System</h3>
+        <span class="tech">YOLO · OpenCV · Leaflet</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-tag">Intermediate</span>
+        <h3>AI Resume Analyzer</h3>
+        <span class="tech">Python · NLP</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-tag">Intermediate</span>
+        <h3>Campus Event Management System</h3>
+        <span class="tech">QR Attendance · Certificates</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-tag">Intermediate</span>
+        <h3>Hospital Queue System</h3>
+        <span class="tech">SMS Notification · Dashboard</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-tag">Intermediate</span>
+        <h3>AI Chatbot for University</h3>
+        <span class="tech">Python · Flask · LLM API</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-tag">Intermediate</span>
+        <h3>E-Commerce Website</h3>
+        <span class="tech">Login · Cart · Payment · Admin</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-inner">
+    <div class="section-tag">11 — Contact</div>
+    <h2>Let's build <span class="accent">something real.</span></h2>
+    <div class="contact-links">
+      <a href="mailto:mostakimislam.shihab@gmail.com" class="contact-link">mostakimislam.shihab@gmail.com →</a>
+      <a href="https://wa.me/8801306042856" target="_blank" rel="noopener" class="contact-link">WhatsApp →</a>
+      <a href="https://www.facebook.com/mustakimislam.shihab" target="_blank" rel="noopener" class="contact-link">Facebook →</a>
+      <a href="https://www.linkedin.com/in/mustakim-islam-shihab-48972039b/" target="_blank" rel="noopener" class="contact-link contact-link-icon">
+        <svg class="contact-link-svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.95v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/Shihab007DIU" target="_blank" rel="noopener" class="contact-link contact-link-icon">
+        <svg class="contact-link-svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.73.5.98 5.24.98 11.5c0 4.96 3.16 9.16 7.55 10.64.55.1.75-.24.75-.53 0-.26-.01-1.13-.02-2.04-3.07.67-3.72-1.3-3.72-1.3-.5-1.28-1.22-1.62-1.22-1.62-1-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.57 1.2 3.2.92.1-.71.38-1.2.69-1.48-2.45-.28-5.02-1.22-5.02-5.44 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.4.11-2.92 0 0 .93-.3 3.05 1.13a10.6 10.6 0 0 1 5.56 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.52.22 2.64.11 2.92.7.77 1.13 1.75 1.13 2.95 0 4.23-2.58 5.16-5.04 5.43.39.34.74 1.01.74 2.04 0 1.47-.01 2.66-.01 3.02 0 .29.2.64.76.53 4.38-1.48 7.54-5.68 7.54-10.64C23.02 5.24 18.27.5 12 .5Z"/></svg>
+        GitHub
+      </a>
+    </div>
+
+    <button type="button" class="hold-btn" id="holdBtn">
+      <svg class="hold-ring" viewBox="0 0 64 64">
+        <circle class="hold-ring-bg" cx="32" cy="32" r="28"></circle>
+        <circle class="hold-ring-progress" id="holdRingProgress" cx="32" cy="32" r="28"></circle>
+      </svg>
+      <span class="hold-btn-label" id="holdLabel">Press &amp; hold to copy email</span>
+    </button>
+
+    <form class="contact-form" id="contactForm" action="mailto:mostakimislam.shihab@gmail.com" method="POST" enctype="text/plain">
+      <div class="form-row">
+        <label for="cf-name">Name</label>
+        <input type="text" id="cf-name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="cf-email">Email</label>
+        <input type="email" id="cf-email" name="email" required>
+      </div>
+      <div class="form-row">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="form-submit" id="formSubmit">Send message</button>
+      <p class="form-status" id="formStatus">
+        <svg class="form-check" id="formCheck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>
+        <span id="formStatusText"></span>
+      </p>
+    </form>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div>© 2026 Mustakim Islam Shihab</div>
+  <div>Savar, Dhaka</div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
